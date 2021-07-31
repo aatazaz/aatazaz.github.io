@@ -1,0 +1,53 @@
+<html>
+ 
+ 
+ 
+<script>
+ function getPhotos(videos) {
+   videos.map(video => {
+     
+var photgrapher= video.user.name;
+var videoUrl= video.video_files[2].link;
+var videoImage= video.video_pictures[2].picture;
+let content = imagesTable.innerHTML;
+  content += '<tr><td>' + photgrapher + '</td> <td>' + videoImage + '</td> <td>' + videoUrl + '</td></tr>';
+  imagesTable.innerHTML = content;
+
+    
+
+    })
+
+ 
+}
+
+fetch("https://api.pexels.com/videos/popular?per_page=80",{
+  headers: {
+    Authorization: "563492ad6f917000010000017a6fd7dd29974cef8700ca8ebc4ef00d"
+  }
+})
+   .then(resp => {
+     return resp.json()
+   })
+   .then(data => {
+     getPhotos(data.videos);
+   })
+
+
+</script>
+ 
+<body>
+
+<table id="imagesTable">
+       
+           
+        
+    </table>
+
+
+<div class="container">
+ <!-- <div class="card">
+     <img src="" />
+  </div> --> 
+</div>
+</body>
+</html>
