@@ -1,0 +1,52 @@
+<html>
+ 
+ 
+ 
+<script>
+ function getPhotos(images) {
+   images.map(image => {
+     
+var photgrapher= image.photographer;
+var nam= image.src.medium;
+let content = imagesTable.innerHTML;
+  content += '<tr><td>' + photgrapher + '</td> <td>' + nam + '</td></tr>';
+  imagesTable.innerHTML = content;
+
+    
+
+    })
+
+ 
+}
+
+fetch("https://api.pexels.com/v1/curated?per_page=80",{
+  headers: {
+    Authorization: "563492ad6f917000010000017a6fd7dd29974cef8700ca8ebc4ef00d"
+  }
+})
+   .then(resp => {
+     return resp.json()
+   })
+   .then(data => {
+     getPhotos(data.photos);
+   })
+
+
+</script>
+ 
+<body>
+
+<table id="imagesTable">
+       
+           
+        
+    </table>
+
+
+<div class="container">
+ <!-- <div class="card">
+     <img src="" />
+  </div> --> 
+</div>
+</body>
+</html>
