@@ -1,64 +1,32 @@
 <!doctype html>
-	<head>
-		
-<style>
-			
-/* CSS comes here */
-			
-body {
-			  
- padding:20px;
-			
+	<head>		
+<style>	
+/* CSS comes here */		
+body {  
+ padding:20px;		
 }
-			
-
-input {
-			    
-padding:5px;
-			    
-background-color:transparent;
-			    
+input {			    
+padding:5px;		    
+background-color:transparent;	    
 border:none;
-			    
-border-bottom:solid 4px #8c52ff;
-			    
+border-bottom:solid 4px #8c52ff;	    
 width:250px;
-			    
-font-size:16px;
-			
+font-size:16px;	
+}	
+.qr-btn {			   
+ background-color:#8c52ff;		   
+ padding:8px;  
+color:white;	    
+cursor:pointer;	
 }
-			
-			
-.qr-btn {
-			   
- background-color:#8c52ff;
-			   
- padding:8px;
-			    
-color:white;
-			    
-cursor:pointer;
-			
-}
-		
-</style>
-		
-		
+</style>		
 <title>QR Code</title>
-	
 </head>
 	<body>
-		
-<h3> </h3>
-        
-         
-       
+<h3> </h3>       
 </div>
-       
- <br/>
-        
-<p id="qr-result"> </p>
-        
+ <br/>     
+<p id="qr-result"> </p>  
 <canvas id="qr-code"></canvas>
         
         
@@ -121,11 +89,12 @@ value: qrtext
 	}
  
 		function expfunction() {
+			alert('Hello');
 			var canvas=document.getElementById("qr-code");
 
 // hide the canvas
 canvas.style.display="none";
-  alert('Hello');
+  
 }
 
 </script>
