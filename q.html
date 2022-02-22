@@ -84,14 +84,19 @@ value: qrtext
  });    
  }
 	}
-window.setTimeout(expfunction, 2000);   
-function expfunction() {
 
- var canvas=document.getElementById("qr-code");
+window.setTimeout(expfunction, 4000); 
+
+function expfunction() {
+var canvas=document.getElementById("qr-code");
+
 // hide the canvas
+
 canvas.style.display="none"; 
 
-alert('QR Code Expired! Please Reload...');
+
+ 
+
 }
 	
 </script>
