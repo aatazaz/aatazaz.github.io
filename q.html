@@ -87,11 +87,11 @@ value: qrtext
 window.setTimeout(expfunction, 2000);   
 function expfunction() {
 
- var canvas=document.getElementById("qr-code");
+ var canvas=document.querySelector("qr-code");
 // hide the canvas
 canvas.style.display="none"; 
 
-alert('QR Code Expired! Please Reload.');
+alert('QR Code Expired! Please Reload..');
 }
 	
 </script>
